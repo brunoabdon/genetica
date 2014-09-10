@@ -18,7 +18,7 @@ public class Deus {
     
     private static final int PRECISAO = 1000;
     
-    static boolean randomBoolean(int percentaualDeChance) {
+    static boolean randomBoolean(double percentaualDeChance) {
         return r.nextInt(100*PRECISAO) <= percentaualDeChance * PRECISAO;
     }
     

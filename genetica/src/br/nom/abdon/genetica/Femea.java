@@ -12,7 +12,7 @@ public class Femea extends Pessoa{
     public Pessoa reproduz(Macho macho){
         boolean contaminado = 
             (this.taDoente() && macho.taDoente())
-            || ((this.taDoente() || macho.taDoente()) && Deus.randomBoolean(25));
+            || ((this.taDoente() || macho.taDoente()) && Deus.randomBoolean(50));
         
         return
             Deus.randomBoolean(50)

@@ -12,7 +12,7 @@ public abstract class Pessoa {
     }
     
     public boolean sobrevive(){
-        return taDoente ? Deus.randomBoolean(5) : true;
+        return taDoente ? Deus.randomBoolean(90) : true;
     }
     
     public boolean taDoente() {

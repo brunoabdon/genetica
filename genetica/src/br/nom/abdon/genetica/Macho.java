@@ -9,5 +9,4 @@ public class Macho extends Pessoa{
     public Macho(boolean taDoente) {
         super(taDoente);
     }
-    
 }

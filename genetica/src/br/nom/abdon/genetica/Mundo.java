@@ -37,8 +37,8 @@ public class Mundo {
         Set<Femea> femeas = new HashSet<>(quantidadeInicial/2);
         
         for (int i = 0; i < quantidadeInicial/2; i++) {
-            machos.add(new Macho(Deus.randomBoolean(90)));
-            femeas.add(new Femea(Deus.randomBoolean(90)));
+            machos.add(new Macho(Deus.randomBoolean(99)));
+            femeas.add(new Femea(Deus.randomBoolean(99)));
         }
         
         Set<Macho> machosNovaGeracao = machos;
@@ -53,7 +53,7 @@ public class Mundo {
             imprimeRelatorioDaGeracao(machosNovaGeracao,femeasNovaGeracao);
             machos = sobreviventes(machosNovaGeracao);
             femeas = sobreviventes(femeasNovaGeracao);
-        
+
             machosNovaGeracao = new HashSet<>();
             femeasNovaGeracao = new HashSet<>();
             
@@ -64,7 +64,9 @@ public class Mundo {
                 final Femea femea = filaDeFemas.next();
                 final Macho macho = filaDeMacho.next();
 
-                for (int j = 0; j < fertilidade; j++) {
+                int quantosFilhos = Deus.randomBoolean(85) ? 2 :3;
+                
+                for (int j = 0; j < quantosFilhos; j++) {
                     procriar(femea, macho, machosNovaGeracao, femeasNovaGeracao);
                 }
             }
